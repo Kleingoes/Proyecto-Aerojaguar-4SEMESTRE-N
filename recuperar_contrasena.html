@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restablecer Contraseña</title>
+  <link rel="stylesheet" href="estilo_recuperar.css">
+</head>
+<body>
+
+<div class="container">
+  <h2>Restablecer Contraseña</h2>
+  <p>Para restablecer la contraseña, por favor proporciona la siguiente información:</p>
+  <form action="Recuperar_contrasena.php" method="post">
+    <table>
+      <tr>
+        <th>Para restablecer la contraseña necesitas proporcionar:</th>
+      </tr>
+      <tr>
+        <td>Usuario:</td>
+        <td><input type="text" name="usuario" placeholder="Ingrese su usuario" required></td>
+      </tr>
+      <tr>
+        <td>Origen del Usuario:</td>
+        <td><input type="text" name="origen_usuario" placeholder="Ingrese el origen de su usuario" required></td>
+      </tr>
+      <tr>
+        <td>Nueva Contraseña:</td>
+        <td><input type="password" name="nueva_contrasena" placeholder="Ingrese su nueva contraseña" required></td>
+      </tr>
+    </table>
+    <input type="submit" value="Restablecer Contraseña">
+  </form>
+</div>
+
+</body>
+</html>
+

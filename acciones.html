@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VUELOS JAGUAR</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1 style="text-align: center; color: #fff; font-size: 36px;">VUELOS JAGUAR</h1>
+        <nav>
+            <ul>
+                <li><a href="#destinos" style="color: #fff;">Destinos</a></li>
+                <li><a href="#vuelos" style="color: #fff;">Vuelos</a></li>
+                <li><a href="#ofertas" style="color: #fff;">Ofertas</a></li>
+                <li><a href="#contacto" style="color: #fff;">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="slogan">La libertad de volar, la seguridad del Jaguar</div>
+    </header>
+
+    <section id="inicio" class="banner">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="madridBANNER.jpg" style="width:100%">
+                <div class="text">Madrid</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="berlinBANNER.jpg" style="width:100%">
+                <div class="text">Berlin</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="cdmxBANNER.jpg" style="width:100%">
+                <div class="text">Ciudad de México</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="londres_BANNER.jpg" style="width:100%">
+                <div class="text">Londres</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="aires_BANNER.jpg" style="width:100%">
+                <div class="text">Buenos Aires</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="nuevayork_BANNER.jpg" style="width:100%">
+                <div class="text">Nueva York</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="rio_BANNER.jpg" style="width:100%">
+                <div class="text">Rio de Janeiro</div>
+            </div>
+
+
+            <a class="prev" onclick="plusSlides(-1)" style="color: #fff;">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)" style="color: #fff;">&#10095;</a>
+        </div>
+    </section>
+
+
+    <section id="destinos" class="destinos" style="text-align: center;">
+        <h2 style="color: #333;">Nuestros destinos</h2>
+        <div class="carousel" style="display: flex; justify-content: center; align-items: center;">
+            <div class="card" style="background-color: #f4f4f4; padding: 20px; margin: 10px; border-radius: 5px;">
+                <img src="Madrid.jpg" alt="Destino 1" style="max-width: 100%;">
+                <h3 style="color: #c02b2b;">Madrid, España</h3>
+                <p style="color: #555;">Madrid, la capital de España, es una ciudad vibrante y cosmopolita que combina a la 
+                  perfección la rica historia con la modernidad.</p>
+            </div>
+            <div class="card" style="background-color: #f4f4f4; padding: 20px; margin: 10px; border-radius: 5px;">
+                <img src="Berlin.jpg" alt="Destino 2" style="max-width: 100%;">
+                <h3 style="color: #c02b2b;">Berlín, Alemania</h3>
+                <p style="color: #555;">Berlín, la capital de Alemania, es una ciudad fascinante y vibrante que refleja 
+                  una rica historia, una cultura diversa y una escena artística y creativa en constante evolución. </p>
+            </div>
+            <div class="card" style="background-color: #f4f4f4; padding: 20px; margin: 10px; border-radius: 5px;">
+                <img src="cdmx.jpg" alt="Destino 3" style="max-width: 100%;">
+                <h3 style="color: #c02b2b;">CDMX, México</h3>
+                <p style="color: #555;">La Ciudad de México, capital de México, es una metrópolis bulliciosa y multicultural que combina 
+                  una rica historia con una vibrante vida contemporánea. </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="vuelos" class="vuelos">
+        <h2 style="text-align: center; color: #333;">Registrar Próximos Vuelos</h2>
+        <form action="registrar_vuelo.php" method="post" style="text-align: center;">
+            <label for="origen" style="color: #333;">Origen:</label>
+            <input type="text" id="origen" name="origen" required><br><br>
+            <label for="destino" style="color: #333;">Destino:</label>
+            <input type="text" id="destino" name="destino" required><br><br>
+            <label for="fecha" style="color: #333;">Fecha:</label>
+            <input type="date" id="fecha" name="fecha" required><br><br>
+            <label for="hora" style="color: #333;">Hora:</label>
+            <input type="time" id="hora" name="hora" required><br><br>
+            <label for="plazas_disponibles" style="color: #333;">Asiento en disponsicion:</label>
+            <input type="number" id="plazas_disponibles" name="plazas_disponibles" required><br><br>
+            <input type="submit" value="Registrar Vuelo" style="background-color: #c02b2b; color: #fff; padding: 10px 20px; border: none; border-radius: 5px;">
+        </form>
+        <h2 style="text-align: center; color: #333;">Próximos vuelos</h2>
+        <div class="vuelos-programados" style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap;">
+            <div class="vuelo" style="text-align: center; background-color: #f4f4f4; padding: 20px; margin: 10px; border-radius: 5px;">
+                <h3>Vuelo a Madrid</h3>
+                <p>Fecha: 15 de mayo de 2024</p>
+                <p>Hora: 10:00 AM</p>
+                <p>Plazas disponibles: 50</p>
+            </div>
+            <div class="vuelo" style="text-align: center; background-color: #f4f4f4; padding: 20px; margin: 10px; border-radius: 5px;">
+                <h3>Vuelo a Berlín</h3>
+                <p>Fecha: 20 de mayo de 2024</p>
+                <p>Hora: 12:30 PM</p>
+                <p>Plazas disponibles: 40</p>
+            </div>
+            <div class="vuelo" style="text-align: center; background-color: #f4f4f4; padding: 20px; margin: 10px; border-radius: 5px;">
+                <h3>Vuelo a CDMX</h3>
+                <p>Fecha: 25 de mayo de 2024</p>
+                <p>Hora: 3:45 PM</p>
+                <p>Plazas disponibles: 30</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="ofertas" class="ofertas">
+        <h2 style="text-align: center; color: #333;">Ofertas especiales</h2>
+        <div class="ofertas-grid" style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap;">
+            <div class="oferta" style="text-align: center; background-color: #fff; padding: 20px; margin: 10px; border-radius: 5px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+                <img src="Tokyo.jpg" alt="TOKYO, JAPÓN" style="max-width: 100%;">
+                <h3 style="color: #c02b2b;">¡Vuela a Tokyo, Japón desde $30,000 PESOS!</h3>
+                <p style="color: #555;">Válido hasta el 25 de Mayo del 2024.</p>
+                <a href="#inicio" class="btn-inicio" style="background-color: #c02b2b; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Inicio</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="contacto">
+        <h2 style="text-align: center; color: #333;">Información de contacto</h2>
+        <p style="text-align: center; color: #555;">Puedes contactarnos en cualquier momento:</p>
+        <p style="text-align: center; color: #555;">Teléfono: +52 966 593 9118</p>
+        <p style="text-align: center; color: #555;">Correo electrónico: info@vuelosjaguar.com</p>
+    </section>
+
+    <!-- JavaScript para el slideshow -->
+    <script src="slideshow.js"></script>
+
+</body>
+</html>

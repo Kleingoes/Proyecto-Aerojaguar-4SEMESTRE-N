@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro e Inicio de Sesión</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: right;
+      align-items: right;
+      height: 120vh;
+      margin: 4;
+    }
+    .form-container {
+      display: flex;
+      justify-content: space-around;
+      width: 700px;
+    }
+    .form-container .form-box {
+      width: 280px;
+      padding: 25px;
+      border: 3px solid #000000;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(53, 41, 41, 0.1);
+    }
+    .form-container .form-box h2 {
+      text-align: medium;
+    }
+    .form-container .form-box input[type="text"],
+    .form-container .form-box input[type="password"],
+    .form-container .form-box select {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 10px;
+      box-sizing: border-box;
+      border: 1px solid #000000;
+      border-radius: 5px;
+    }
+    .form-container .form-box input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+      border: none;
+      background-color: #0c20a7;
+      color: #e1e3e4;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .form-container .form-box input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+    .success-message {
+      color: green;
+      text-align: center;
+    }
+    .image-box-title {
+      text-align: center;
+    }
+    .forgot-password-link {
+      display: block; /* Cambiado a bloque para ocupar toda la línea */
+      margin: 10px auto; /* Margen superior e inferior de 10px y centrado horizontalmente */
+      text-align: center; /* Centrar el texto */
+      text-decoration: none;
+      color: #fff;
+      background-color: orange;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+    .forgot-password-link:hover {
+      background-color: #ff8c00;
+    }
+  </style>
+</head>
+<body>
+
+<div class="form-container">
+  <div class="form-box">
+    <h2>Registro</h2>
+    <form action="login.php" method="post">
+      <input type="text" name="nuevo_usuario" placeholder="Nuevo usuario" required>
+      <input type="password" name="nueva_contrasena" placeholder="Nueva contraseña" required>
+      <input type="text" name="pais" placeholder="País" required>
+      <input type="submit" value="Registrarse">
+      <?php if(!empty($mensaje)) { ?>
+        <p class="success-message"><?php echo $mensaje; ?></p>
+      <?php } ?>
+    </form>
+</div>
+
+<div class="form-box">
+  <h2>Iniciar sesión</h2>
+  <form action="login.php" method="post">
+    <input type="text" name="usuario" placeholder="Usuario" required>
+    <input type="password" name="contrasena" placeholder="Contraseña" required>
+    <input type="submit" value="Iniciar sesión">
+    <a class="forgot-password-link" href="recuperar_contrasena.html">¿Olvidaste tu contraseña?</a>
+  </form>
+</div>
+</div>
+
+<div class="form-container">
+<div class="image-box">
+  <img src="aerojaguar.jpg" alt="Aerojaguar logo" style="width:95%" >
+  <h1 class="image-box-title">Vuelos Jaguar</h1>
+</div> 
+</div>
+</body>
+</html>
